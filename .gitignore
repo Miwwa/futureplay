@@ -1,0 +1,34 @@
+# Target binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output of the "go build" and "go test" commands
+/build/
+/bin/
+
+# IDE related files and directories
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Test binary, core dumps
+*.test
+*.out
+*.sh
+
+# Go coverage tool files and other temporary files
+*.cover
+*.tmp
+*.swap
+
+# .env files
+.env
+.env.*
+!.env.local
