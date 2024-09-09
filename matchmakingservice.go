@@ -2,7 +2,6 @@ package futureplay_assignment
 
 import (
 	"errors"
-	"fmt"
 	"slices"
 	"time"
 )
@@ -103,7 +102,6 @@ func (m *MatchmakingServiceImpl) Start(callback MatchFoundHandler) func() {
 			case <-stopTimer:
 				return
 			case <-timer.C:
-				fmt.Println(time.Now().Format(time.TimeOnly), "Tick")
 				m.processQueue()
 			}
 		}
