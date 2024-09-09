@@ -44,8 +44,10 @@ type MatchmakingService interface {
 
 func DefaultMatchmakingOptions() MatchmakingOptions {
 	// MaxPlayerInMatch = 10 - task requirement
-	// MatchInterval = 10s, EntryTimeout = 20s - means player will wait a new competition no more than 30s
 	// MaxLevelDiff = 2 - for example
+	// MatchInterval = 10s, EntryTimeout = 20s
+	// we are trying to form a new competition every 10s, player entry expires in 20s, so next tick will be no longer than 30s
+	// options can be adjusted to optimize time in queue
 	return MatchmakingOptions{
 		MaxPlayerInMatch: 10,
 		MatchInterval:    10 * time.Second,
